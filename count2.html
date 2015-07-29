@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<p class="txt_volun">이벤트 참여 <strong>33357</strong>개 입니다.</p>
+<div class="txt_volun">
+	<strong>1234564545</strong>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.txt_volun strong').each(function () {
+		$(this).prop('Counter',0).animate({
+			Counter: $(this).text()
+		}, {
+			duration: 4000,
+			easing: 'swing',
+			step: function (now) {
+				var aa = Math.ceil(now) // 올림
+				  , ab = aa.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마단위로 자름
+				$(this).text(ab);
+			}
+		});
+
+	});
+});
+	
+</script>
+</body>
+</html>

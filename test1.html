@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+</head>
+<body>
+
+<div class="">
+	a
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 너비가 100px~ 200px사이에 모든 div요소 선택
+		$('div').filter(function(){
+			var width = $(this).width(); // $(this) jquery 개체
+			return width > 100 && width < 200;
+		});
+
+		// 자식의 수가 10또는 20인 모든 요소 선택
+		$('*').filter(function(){
+			var children = $(this).children().length();
+			return children === 10 || children === 20;
+		});
+	});
+</script>
+</body>
+</html>

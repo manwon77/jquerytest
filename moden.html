@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/*
+		setTimeout(function(){
+			
+			var value = $('select > option:selected').val();
+			alert(value);
+		}, 2000);
+
+		$('tr:odd').css('background', '#f9f9f9');
+		$('tr:even').css('background', '#9f9f9f');
+
+		$('tr:first').css('background','#000').css('color','#fff');
+		*/
+		var array = [
+			{ name : 'Hanbit Media', link: 'http://hanb.co.kr' },
+			{ name : 'naver', link : 'http://www.naver.com' },
+			{ name : 'daum', link : 'http://www.daum.net' },
+		];
+		
+
+		// each() 메서드, 매개변수 index, item
+		$.each(array, function(index, item){
+			
+			var output = '';
+
+			//문자열을 만듬
+			output += '<a href="' + item.link + '">';
+
+			output += '<h1>' + item.name + '</h1>';
+			output += '</a>';
+
+			// 집어넣습니다.
+			document.body.innerHTML += output;
+		});
+	});
+
+</script>
+</head>
+<body>
+
+
+
+<label for=""></label>
+<select>
+	<option>Apple</option>
+	<option>Bag</option>
+	<option>Cat</option>
+	<option>Dog</option>
+	<option>Elephant</option>
+</select>
+
+<table>
+	<tbody>
+		<tr>
+			<th>123</th>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+		<tr>
+			<th>123</th>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+		<tr>
+			<th>123</th>
+			<td>123</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

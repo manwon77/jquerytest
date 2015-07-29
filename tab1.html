@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="css/common.css" />
+<title>Document</title>
+<style type="text/css">
+	body{padding:10px;}
+	a{text-decoration:none;}
+	.clear{clear:both;}
+	.tab1 {position:relative;width:500px;height:400px;}
+	.tab1 li > a{display:block;float:left;padding:10px 20px;border:1px solid #cacaca;}
+	.tab1 li > a.active{border:1px solid #000;border-bottom:0;padding:10px 20px 11px;color:green;}
+	.tab1 .cnt{position:absolute;left:0;top:42px;width:100%;border:1px solid #000;height:300px;font-size:30px;text-align:center;}
+	
+	.tab2 {position:relative;}
+	.tab2 > ul{width:100px;}
+	.tab2 li > a {display:block;border:1px solid #cacaca;padding:20px 10px}
+	.tab2 li > a.active{border:1px solid green; border-right:3px solid green;}
+	.tab2 .cnt {position:absolute;left:100px;top:0;width:300px;height:200px;border:1px solid #000;}
+</style>
+</head>
+<body>
+
+<h2>tab1</h2>
+<div class="tab1 tabType">
+	<ul>
+		<li><a href="#pro1">절약상품</a></li>
+		<li><a href="#pro2">인기상품</a></li>
+		<li><a href="#pro3">3</a></li>
+		<li><a href="#pro4">4</a></li>
+		<li><a href="#pro5">5</a></li>
+		<li><a href="#pro6">6</a></li>
+	</ul>
+	<div id="pro1" class="cnt">
+		<div class="">
+			<ul>
+				<li><a href="#tab1">tab1</a></li>
+				<li><a href="#tab2">tab2</a></li>
+				<li><a href="#tab3">tab3</a></li>
+			</ul>
+			<div id="tab1" class="cnt">ta1</div>
+			<div id="tab2" class="cnt">ta2</div>
+			<div id="tab3" class="cnt">ta3</div>		
+		</div>	
+	</div>	
+	<div id="pro2" class="cnt">
+	2
+	</div>
+	<div id="pro3" class="cnt">3</div>
+	<div id="pro4" class="cnt">4</div>
+	<div id="pro5" class="cnt">5</div>
+	<div id="pro6" class="cnt">6</div>
+</div>
+
+<h2 class="clear">tab2</h2>
+<div class="tab2 tabType">
+	<ul>
+		<li><a href="#tab1">tab1</a></li>
+		<li><a href="#tab2">tab2</a></li>
+		<li><a href="#tab3">tab3</a></li>
+	</ul>
+	<div id="tab1" class="cnt">ta1</div>
+	<div id="tab2" class="cnt">ta2</div>
+	<div id="tab3" class="cnt">ta3</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+
+	
+	$('.tabType ul').each(function(){
+		var $active, $content, $links = $(this).find('a');
+
+		$active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+		// $active : a를 필터로 걸러서 href를 잡고 배열로 첫번째를 가르킴, 또는 변수 $links의 첫번째를 가르킴
+		$active.addClass('active');
+		// $active ( a ) 에 클래스 active를 추가
+
+		$content = $($active[0].hash);
+		// $content : a의 배열 첫번째의 hash값을 $content 에 넣어줌
+		
+		$links.not($active).each(function(){
+		
+			$(this.hash).fadeOut();
+		});
+
+		$(this).on('click', 'a' , function(e){
+			$active.removeClass('active');
+			$content.fadeOut();
+
+			$active = $(this);
+			$content = $(this.hash);
+
+			$active.addClass('active');
+			$content.fadeIn();
+
+			e.preventDefault();
+		});
+		
+	});
+	
+
+	 /*
+  $('.tab1 ul').each(function(){
+    // For each set of tabs, we want to keep track of
+    // which tab is active and it's associated content
+    var $active, $content, $links = $(this).find('a');
+
+    // If the location.hash matches one of the links, use that as the active tab.
+    // If no match is found, use the first link as the initial active tab.
+    $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+    $active.addClass('active');
+
+    $content = $($active[0].hash);
+
+    // Hide the remaining content
+    $links.not($active).each(function () {
+      $(this.hash).hide();
+    });
+
+    // Bind the click event handler
+    $(this).on('click', 'a', function(e){
+      // Make the old tab inactive.
+      $active.removeClass('active');
+      $content.hide();
+
+      // Update the variables with the new link and content
+      $active = $(this);
+      $content = $(this.hash);
+
+      // Make the tab active.
+      $active.addClass('active');
+      $content.show();
+
+      // Prevent the anchor's default click action
+      e.preventDefault();
+    });
+  });
+  */
+	
+	
+
+	
+});
+</script>
+</body>
+</html>

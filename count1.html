@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="css/common.css" />
+<style type="text/css">
+	#shiva
+{
+  padding:10px 20px;
+	width:754px;
+	height: 183px;
+	background:url(images/con10_no.png) no-repeat 0 0;;
+text-align:center;	
+ 
+  margin:5px;
+}
+.count
+{
+  line-height: 100px;
+  color:white;
+  margin-left:30px;
+  font-size:70px;
+  font-weight:bold;
+  font-family:'GreyscaleBasic';
+ 
+  
+}
+#talkbubble {
+   width: 120px;
+   height: 80px;
+   background: red;
+   position: relative;
+   
+  float:left;
+  margin:20px;
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+  
+   border-right: 26px solid red;
+  
+}
+
+</style>
+</head>
+<body>
+
+<div id="shiva"><span class="count">120030</span></div>
+<div id="shiva"><span class="count">100000000</span></div>
+<div id="shiva"><span class="count">853</span></div>
+<div id="shiva"><span class="count">154</span></div>
+<div id="shiva"><span class="count">10</span></div>
+<div id="shiva"><span class="count">87</span></div>
+<div style="clear:both"></div>
+<div id="talkbubble"><span class="count">1421</span></div>
+<div id="talkbubble"><span class="count">145</span></div>2015-07-28
+<div id="talkbubble"><span class="count">78</span></div>
+<br />
+<br />
+<a href="www.i-visionblog.com">visit tutorial</a>
+<br />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$('.count').each(function () {
+		$(this).prop('Counter',0).animate({
+			Counter: $(this).text()
+		}, {
+			duration: 2000,
+			easing: 'swing',
+			step: function (now) {
+				var aa = Math.ceil(now) // 올림
+				  , ab = aa.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마단위로 자름
+				$(this).text(ab);
+			}
+		});
+
+	});
+		
+});
+</script>
+</body>
+</html>

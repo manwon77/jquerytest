@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EmulateIE9" >
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/radialProgress.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+
+	<h2>TEST</h2>
+	
+	<h2>Donut Chart</h2>
+	<div id="chart_d"></div>
+	<script>
+		
+		var options = {
+			'dataset': {
+				title: 'Web accessibility status',
+				values:[18, 12, 3, 10, 7],
+				colorset: ['#2BC8C9', '#FF8C00', '#DC143C','#2EB400', '#666666'],
+				fields: ['A', 'B',  'C', 'D', 'E'] 
+			},
+			'donut_width' : 40, 
+			'core_circle_radius':60,
+			'chartDiv': 'chart_d',
+			'chartType': 'donut',
+			'chartSize': {width:600, height:300}
+		};
+
+		Nwagon.chart(options);
+	</script>
+
+
+
+</body>
+</html>
