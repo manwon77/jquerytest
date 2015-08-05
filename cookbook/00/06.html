@@ -11,16 +11,21 @@
 </head>
 <body>
 
+<p id="pl">p1</p>
+<div id="div1">div1</div>
+<p id="p2">p2</p>
+<p id="p3">p3</p>
+<div id="div2">div2</div>
+<p id="p4">p4</p>
+<div id="div3">div3</div>
 
 <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-	// .data() 메서드는 모든 형식의 dom요소에 임의의 데이터를 저장하고 읽어올수 있도록
-	$('body').data('foo', 52);
-	// body요소에 bar라는 키로 개체를 저장
-	$('body').data('bar', { myType : 'test', count: 40});
-
-	alert($('body').data('foo')); // 52 를 출력
-	alert($('body').data()); // 키를 저장하지 않으면 에러가 난다 ( 1, 3의 경우)
+	// .nextAll() 대상요소 이후에 나오는 모든 형제 요소 선택
+	// .Until() 대상 요소 이후 어디까지 선택해야 하는 지를 지정
+	$("#div1").nextUntil('div').css('background-color', 'red');
+	// id div1 부터 다음 div 까지 사이의 형제 요소를 선택
+	
 </script>
 </body>
 </html>

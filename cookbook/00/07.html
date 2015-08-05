@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+// detach() 동적인 조작을 돕기 위한 , DOM에서 특정 요소를 제거하는 역할
+// remove()와 기능적으로 동일, 해당 요소 데이터를 제거하지 않는다는 차이가 있다
+$(function(){
+	/*
+	var $p = $('p').click(function(){
+		$(this).css("background-color", "yellow");
+	});
+
+	$("p").detach();
+
+	$p.css("color", "red");
+	$p.appendTo("body");
+	*/
+
+	$("<span>").before("<p>taeyo</p>").appendTo("div#box");
+
+});
+
+</script>
+</body>
+</html>
