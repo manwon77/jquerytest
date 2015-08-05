@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>MartMore</title>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../css/sub.css" />
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+	<!-- layerPopup -->
+	<div id="popWrap" style="width:960px; display: block; position: fixed; left: 50%; top: 50%; z-index: 99999;
+  margin-left: -480px; margin-top: -372px;">
+		<div class="pop_head">
+			<h2>프로필 이미지</h2>
+			<a href="#none" class="close"><img src="../images/common/btn_pop_close1.gif" alt="닫기" /></a>
+		</div>
+		<div class="pop_container">
+			<div class="pop_cnt">
+				<div class="pop_mid">
+					<div class="pop_tit">
+						<span class="photo">
+							<span class="bg"></span>
+							<img src="../images/common/@300.gif" alt="" />
+						</span>
+						<span class="pfile">ID_z101234</span>
+						<a href="#none" class="ico_ca"><img src="../images/common/ico_camera.png" alt="" /></a>
+					</div>
+					<div class="pop_modi">
+						<h3><img src="../images/common/ico_pop_user.gif" alt="" /> 사진 업로드</h3>	
+						<table width="100%" class="popForm">
+							<colgroup>
+								<col width="20%" />
+								<col width="80%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>이미지<br />업로드</th>
+									<td>
+										<span class="ipt">
+											<input type="text" id="imgFileName" name="imgFileName" class="sp" style="width:260px" />
+										</span>
+										<input type="file" id="imgFile" name="imgFile" style="position:absolute; width: 96px; height: 32px; filter:alpha(opacity=0); opacity:0; -moz-opacity:0; cursor:pointer;" />
+										<a href="#none"><img src="../images/common/btn_modify1.gif" alt="변경하기" /></a>
+									</td>
+								</tr>
+								<tr>
+									<th>기본<br />이미지</th>
+									<td>
+										<ul class="img_up">
+											<!-- 0709 -->
+											<li>
+												<input type="hidden" name="sampelFileId1" value="1">
+												<input type="hidden" name="sampelFileName1" value="ico_img1.gif">
+												<input type="hidden" name="sampelFileUrl1" value="../images/common/">
+												<label for="sampleImg1"><img src="../images/common/ico_img1.gif" imgUrl="../images/common/ico_img2.gif" alt="" /></label>
+												<span class="btnChk btnChk_ty1"><input type="checkbox" id="sampleImg1" name="sampelGroup" class="chk" value="1" /></span>
+											</li>
+											<li>
+												<input type="hidden" name="sampelFileId2" value="2">
+												<input type="hidden" name="sampelFileName2" value="ico_img2.gif">
+												<input type="hidden" name="sampelFileUrl2" value="../images/common/">
+												<label for="sampleImg2"><img src="../images/common/ico_img2.gif" imgUrl="../images/common/ico_img2.gif" alt="" /></label>
+												<span class="btnChk btnChk_ty1"><input type="checkbox" id="sampleImg2" name="sampelGroup" class="chk" value="2" /></span>
+											</li>
+											<li>
+												<input type="hidden" name="sampelFileId3" value="3">
+												<input type="hidden" name="sampelFileName3" value="ico_img3.gif">
+												<input type="hidden" name="sampelFileUrl3" value="../images/common/">
+												<label for="sampleImg3"><img src="../images/common/ico_img3.gif" imgUrl="../images/common/ico_img3.gif" alt="" /></label>
+												<span class="btnChk btnChk_ty1"><input type="checkbox" id="sampleImg3" name="sampelGroup" value="3" /></span>
+											</li>
+											<li>
+												<input type="hidden" name="sampelFileId4" value="4">
+												<input type="hidden" name="sampelFileName4" value="ico_img4.gif">
+												<input type="hidden" name="sampelFileUrl4" value="../images/common/">
+												<label for="sampleImg4"><img src="../images/common/ico_img4.gif" imgUrl="../images/common/ico_img4.gif" alt="" /></label>
+												<span class="btnChk btnChk_ty1"><input type="checkbox" id="sampleImg4" name="sampelGroup" class="chk" value="4" /></span>
+											</li>
+											<!-- //0709 -->
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btns">
+							<a href="#none"><img src="../images/common/btn_cansel1.gif" alt="취소" /></a>
+							<a href="#none"><img src="../images/common/btn_enter1.gif" alt="확인" /></a>
+						</div>
+				
+					</div>	
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="mask_ty2"></div>
+<script data-main="../js/popType3" src="../js/lib/require2.1.17.js"></script>
+</body>
+</html>
