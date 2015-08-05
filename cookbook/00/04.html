@@ -11,6 +11,8 @@
 <style type="text/css">
 	.noraml{color:red;}
 	.selected{background:yellow;}
+	.all{background:blue;display:none;}
+	.block{display:block;}
 </style>
 </head>
 <body>
@@ -18,11 +20,20 @@
 <label for=""></label>
 <input type="text" class="open" value="text" style="width:100px;height:50px" />
 
+<div class="">
+	<h1>title</h1>
+	<div class="all">
+		전체메뉴
+	</div>
+</div>
 
 <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
 $(".open").click(function(){
 	$("input").toggleClass("normal selected");
+});
+$('h1').click(function(){
+	$('div').toggleClass('.all block');
 });
 </script>
 </body>
