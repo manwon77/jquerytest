@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<form action="">
+<input type="checkbox" />
+<input type="radio" />
+<input type="text" />
+<input type="button" />
+</form>
+
+<form action="">
+<input type="checkbox" />
+<input type="radio" />
+<input type="text" />
+<input type="button" />
+</form>
+
+<input type="checkbox" />
+<input type="radio" />
+<input type="text" />
+<input type="button" />
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	// 특정컨텍스트 안에서 dom요소 선택
+
+	// 컨텍스트 래퍼를 사용하여 모든 form 요소 안에서 input요소를 찾는다 8개의 input
+	alert('selected ' + jQuery('input', $('form')).length + ' inputs');
+
+	// 컨텍스트로 dom 참조를 사용하여 첫번째 form 요소안에서 input 요소를 찾는다
+	alert('selected ' + jQuery('input', document.forms[0]).length + ' inputs');
+
+	// 표현식을 사용하여 body 요소안에 있는 모든 input 요소를 찾는다 12개의 input를 출력
+	alert('selected' + jQuery('input', 'body').length + ' inputs');
+</script>
+</body>
+</html>
