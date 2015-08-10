@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<div id="foo" style="width:100px;height:100px;background:red"></div>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// .delay() 큐 안에서 함수의 실행을 지연, 애니메이션 효과 사이의 시간을 지연
+		$('#foo').slideUp(1000).delay(500).fadeIn(1000);
+
+		// clearQueue 현재 큐에 존재하는 아직 실행되지 않은 모든 함수를 제거
+		// .stop(true) 메서드와 유사할수 있지만 .stop(true) 메서드는 오직 애니에 대해서만 동작, clearQueuq 메서드는 queue 메서드를 상요하여 구성된 일반적인 큐에 존해는 모든 함수
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<div>old content</div>
+<div>old content</div>
+<div>old content</div>
+<div>old content</div>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	// div를 숨김
+	jQuery('div').hide();
+	// div 텍스트 변경
+	jQuery('div').text('new content');
+	// div 클래스 추가
+	jQuery('div').addClass('updatedContent');
+	// div 나타낸다
+	jQuery('div').show();
+
+	// 체인
+	jQuery('div').hide().text('new content').addClass('up').show();
+
+	// 체인 들여쓰기
+	jQuery('div')
+		.hide()
+		.text('new content')
+		.addClass('up')
+		.show();
+});
+</script>
+</body>
+</html>
