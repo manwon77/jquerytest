@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<a href="/category">Category</a>
+<ul id="nav">
+	<li><a href="#anchor1">anchor1</a></li>
+	<li><a href="#anchor2">anchor2</a></li>
+	<li><span><a href="#anchor3">anchor3</a></span></li>
+</ul>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	// 직속 자식 요소 찾기
+	// jQuery('#nav li > a').css('border','1px solid red');
+
+	// jQuery('> p ', '#content');
+	// 기본적으로 jQuery('#content > p') 와 같다
+
+	// jQuery('#content').children();
+	// 이코드는 본질적으로 jQuery('#content>*') 와 동일
+	// 차이점은 상대적으로 빠름 jQuery 셀렉터를 해석하지 않고도 여러분이 원하는 것을 바로 알아낼수 있기 때문, 
+	// children() 메서드를 사용하는 것이 특히 유용한 경우는 변수에 저장 된 jQuery 개체를 다루고자 하는 경우
+
+	var anchors = jQuery('a');
+	// 앵커 요소의 모든 직계 자식들을 가져올수 있는 3가지 방법
+	// 1
+	var i = anchors.children();
+	console.log( i );
+	// 2 
+	jQuery('> *', anchors);
+	// 3
+	anchors.find('> *');
+
+	// 1 번이 가장 빠름
+
+
+
+</script>
+</body>
+</html>

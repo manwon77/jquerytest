@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	jQuery('#content p a');
+	// #context 안에 있는 모든 단락(p 태그) 요소 내의 모든 앵커(a태그) 요소를 선택한다.
+	
+	jQuery('#content p a').addClass('selected');
+	
+	// 셀렉터를 자세하게 작성하는 것이 반드시 빠른것은 아니다
+	jQuery('body div#wrapper div#content');
+
+	// 이코드는 이전코드와 동일하게 동작하지만 더 좋은 성능을 낸다
+	jQuery('#content');
+	
+</script>
+</body>
+</html>
