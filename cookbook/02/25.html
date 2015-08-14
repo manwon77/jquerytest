@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<span>hello bob!</span>
+
+
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	// 무엇을 포함하고 있는 지에 따라 요소 선택
+	// 1. 텍스트 콘텐츠를 포함하고 있는것
+	jQuery('span:contains("bob")');
+	// contaions() 필터는 대소문자를 구분한다는 것에 주의
+
+	// 2. 요소컨텍츠를 포함하고 있는것
+
+
+	// 3. 중첩된 요소를 검사하기 위해서 :has() 필터를 사용
+	jQuery('div:has(p a)');
+
+
+
+</script>
+</body>
+</html>

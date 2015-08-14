@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+<style type="text/css">
+	div{margin-top:30px;padding:10px;}
+
+</style>
+</head>
+<body>
+
+<div>1</div>
+<div>1</div>
+<div id="content">1</div>
+<div>1</div>
+
+<a href="#none">123</a>
+<a href="#none">123</a>
+<a href="#none">123</a>
+<a href="#none">123</a>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	// 일치되지않은 요소 선택
+	var i = jQuery('div:not(#content)'); // 모든 #content 를 제외한 div 요소를 선택
+	i.css('border','1px solid red');
+	// 이 필터는 전달된 셀렉터와 일치하는 모든 요소를 현재 컬렉션에서 제거,
+	
+	// :not필터와 매우 유사한 기능을 갖는 메서드인 not() 도 제공한다. 
+	// not() 메서드는 셀렉터와 dom컬렉션 / 노드 모두를 인자로 가질수 있다
+	var $anchors = jQuery('a');
+	$anchors.click(function(){
+		$anchors.not(this).addClass('not-colicked');
+	});
+	// 이 코드는 앵커가 클릭될때 자신을 제외한 모든 앵커에게 not-clicked 클래스를 추가할 것이다
+	// this키워드는 클릭된 요소를 의미한다
+</script>
+</body>
+</html>

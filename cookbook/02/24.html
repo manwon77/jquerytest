@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+<style type="text/css">
+	div {height:50px;width:100px;background:red;}
+</style>
+</head>
+<body>
+
+<div class="">
+	
+</div>
+<div id="elem" style="margin-top:30px"></div>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	jQuery('div:animated');
+
+	// 현재 애니메이션 중이 아닌 모든 요소에 일괄적인 함수를 적용할 필요가 있을때 특히 유용
+	// 아직 애니메이션 중이 아닌 모든 <div> 요소에 애니메이션을 적용해야 하는 경우
+	jQuery('div:not(div:animated)').animate({height:100});
+
+	var myElem = jQuery('#elem');
+	if (myElem.is(':animated') ){
+		// 작업수행
+	}
+	
+</script>
+</body>
+</html>

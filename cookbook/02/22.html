@@ -11,15 +11,57 @@
 </head>
 <body>
 
+<div id="content">
+	<h1>main title</h1>
+	<h2>section title</h2>
+	<p>some content..</p>
+	<h2>section title</h2>
+	<p>More content....	</p>
+	<h3>// h3 //</h3>
+</div>
+
+<ul style="margin-top:20px">
+	<li>first item</li>
+	<li class="selected">second item</li>
+	<li>third item</li>
+	<li class="on"><span>fourth</span> item</li>
+	<li>firth item</li>
+	<span>span</span>
+</ul>
+
+<ul>
+	<li>111</li>
+	<li class="on">222</li>
+	<li><span style="display:block;padding:30px;">333</span><strong>456789</strong>
+		<ul>
+			<li>aaa</li>
+			<li>aaa2</li>
+		</ul>
+	</li>
+	<li>444</li>
+	<li><span>555</span></li>
+</ul>
 
 <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
 	// 특정 형제들 선택
+	// jQuery('h1 + h2').css('border','1px solid red');
+	// 인접 요소
 
+	jQuery('h1').siblings('h2, h3, p').css('border', '1px solid red');
+	// h1 요소의 형제인 h1, h3 그리고 p요소를 선택
+	// 이 메서드에는 필터링을 위해 추가적인 셀렉터 식을 전달 할 수 있다
+	
+	jQuery('li.selected').nextAll('li').css('border','2px solid blue');
+	// nextAll 메서드는 siblings 와 유사하게 결과를 반화하기에 앞서 필터링을 할수 있도록 셀렉터 식을 가질수 있다 , 만약 셀렉터를 전달하지 않는다면, nextalll() 은 주체가 되는 요소 이후에 나타나는 모든 형제 요소를 반환
+	jQuery('li.on ~ li').css('border','2px solid green');
 
+	jQuery('li.selected').next('span').css('border','2px solid black');
 
-
-
+	// next() 메서드는 셀렉터 구문을 대신하여 사용할 수 있는 훌륭한 메서드이다
+	// 프로그래밍 코드 내부에 서 jQuery개체를 변수처럼 다루어야 하는 경우에 말이다
+	var topHeaders = jQuery('h1');
+	topHeaders.next('h2').css('padding','100');
 
 </script>
 </body>
