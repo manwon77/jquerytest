@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<h2>estenr conferan</h2>
+
+<ol id="east">
+	<li>on1</li>
+	<li>on2</li>
+	<li>on3</li>
+	<li>on4</li>
+	<li>on5</li>
+	<li>on6</li>
+	<li>on7</li>
+	<li>on8</li>
+	<li>on9</li>
+	<li>on10</li>
+</ol>
+
+<h2>west</h2>
+<ol id="west">
+	<li>off1</li>
+	<li>off2</li>
+	<li>off3</li>
+	<li>off4</li>
+	<li>off5</li>
+	<li>off6</li>
+	<li>off7</li>
+	<li>off8</li>
+	<li>off9</li>
+	<li>off10</li>
+</ol>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+// 선택집합을 특정 항목들로 줄이기
+// jQuery 셀렉터는 적용범위가 넓고 질의를 기반으로 페이지 상의 모든 요소를 선택할수 있다
+// 하지만 단일 항목의 위치를 기반으로 하여 선택하고자 한다면 코드를 변경하지 않고서는 그 항목을 얻어낼수 있는 간단한 방법이 존재하지 않는다
+
+(function ($){
+	$(document).ready(function(){
+		$("ol#east > li").eq(7).css('border-bottom','1px solid blue');
+		$("ol#west > li").eq(7).css('border-bottom','1px solid red');
+	});
+})(jQuery);
+</script>
+</body>
+</html>

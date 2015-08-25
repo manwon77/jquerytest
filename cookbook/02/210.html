@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	jQuery('*').filter(function(){
+		return !!jQuery(this).css('backgroundImage');
+		// 이코드 배경 이미지를 갖는 모든 요소를 선택
+		// 이 함수는 대상요소에 backgroundImage 가 지정되어 잇는 경우 true를 반환
+		// !! 자바스크립트의 어떤 형식을 boolean 식으로 빠르게 변활 할 수 있는 방법이다
+	});
+</script>
+<script type="text/javascript">
+	// this; // 일반적인 요소개체
+	// jQuery(this) // jQuery 개체
+
+	// 너비가 100px 에서 200px 사이에 있는 모든 div 요소 선택
+	jQuery('div').filter(function(){
+		var width = jQuery(this).width();
+		return width > 100 && width < 200;
+	});
+
+	// 일반적인 이미지 확장자를 갖는 모든 이미지를 선택
+	jQuery('img').filter(function(){
+		return /\.(jpe?g|png|bmp|gif)(\?.+)?$/.text(this.src);
+	});
+
+	// 자식의 수가 10 또는 20인 모든 요소 선택
+	jQuery('*').fiter(function(){
+		var children = jQuery(this).children().length;
+		return children === 10 || children === 20;
+	});
+</script>
+</body>
+</html>

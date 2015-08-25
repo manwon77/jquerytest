@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$.expr[':'].newFilter = function(elem, index, match){
+	return true; // filter() 메서드처럼 true/false 를 반환
+}
+
+$.expr[':'].inline = function(elem){
+	return $(elem).css('display') === 'inline';
+};
+// 어떤 속성을 가지고 있는 모든 요소를 얻어내고자 한다고 가정해볼때 다음 필터는 display가 inline 인 모든 요소와 일치할 것이다.
+
+// ex1
+$('div a:inline').css('color','red');
+// ex2
+$('span').filter(':not(:inline)').css('color','blue');
+
+jQuery 사용자 정의 셀렉터 ( :radio, :hidden  등도 ) 이러한 방식으로 만들어졌다
+
+
+함수로 전달되는 세번째 매개변수는 jQuery가 셀텍터 문자열을 대상으로 수행하는 정규 표현식 매치로부터 반환되는 배열이다
+
+$('span').data('something', 123);
+
+// 우리는 이것이 가능하길 원한다.
+$('*:data(something, 123)');
+// 셀렉터의 목적은 jquery의 data() 메서드를 통해서 추가된 데이터를 가지고 잇는 모든 요소들을 선택하는 것 , 데이터 key로 something 을 가지며, 그 값이 숫자 123인 요소들을 찾는것
+
+필터는 다음과 같이 만들어져야할 것이다.
+$.expr[':'].data = function(elem, index, m){
+	// 매치에서 ":data("와 그 뒤로 이어지는 ")"라는 글자를 제거해야 한다. 이들은 필요치 않으니 말이다.
+	m[0] = m[0].replace(/:data\(|\'")
+}
+
+jQuery('div:data(something)');
+// ' something이 '참' 값인지 여부를 검사한다.
+
+// 따옴표가 있거나 없거나 의 경우
+jQuery('div:data(something, "something else")');
+// 만일 동시에 하나 이사으이 새로운 셀렉터를 추가하고자 한다면 jQuery의 extend() 메서드를 사용하면 된다.
+
+jQuery.extend(jQuery.expr[':'], {\
+	newFilter : function(elem, index, match){
+		// true, false, 반환
+	},
+	newFilter2 : function(elem, index, match){
+
+		// true, false, 반환
+	},
+	newFilter3 : function(elem, index, match){
+		// true, false, 반환
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<form action="">
+
+<input type="text" id="" value="text" />
+<input type="button" id="" value="text" />
+<input type="password" id="" value="text" />
+<input type="file" id="" value="text" />
+<input type="radio" id="" value="text" />
+<input type="checkbox" id="" value="text" />
+<input type="submit" id="" value="text" />
+
+</form>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+// 컨텍스트 매개변수 사용하기
+$('form').bind('submit', function(){
+	var allinputs = $('input', this);
+	// 지금 allinputs 로 작업을 할것이다
+	// this 가 두번째 매개변수로 전달되고 있다는 점
+	// 처리기 내에서 this는 폼 요소를 의미
+
+	allinputs.css('border','2px solid red');
+	
+	
+});
+
+</script>
+</body>
+</html>

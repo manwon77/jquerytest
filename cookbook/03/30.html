@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link brel="stylesheet" href="../../css/common.css" />
+<style type="text/css">
+	.even{background:skyblue;}
+	.odd{background:#ccc;}
+</style>
+</head>
+<body>
+<h2>family Members</h2>
+<ul>
+	<li>Ralpl</li>
+	<li>HOpe</li>
+	<li>Brando</li>
+	<li>JOIr</li>
+	<li>Ralphie</li>
+</ul>
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	// 선택된 결과의 집합을 루프 돌면서 처리하기
+	var urls = [];
+	$("div#post a[href]").each(function (i){
+		urls[i] = $(this).attr('href');
+	});
+	alert(urls.join(","));
+	// $().each(); 메서드를 사용하여 jQuery개체에 있는 각 요소를 반복하여 처리함으로써 배열을 만들수 있다
+	// 소스에 보인느것과 같이 jQuery 개체로 변화해 주는 jQuery 래퍼인 $()로 this변수를 감싸고 있기 때문에 우리는 개별요소에 접근할 수 있을뿐만 아니라 그 요소에 대해 jQuery메서드를 실행할 수 있는것
+	(function ($){
+		$(document).ready(function(){
+			$("ul > li").each(function(i){
+				if ( i % 2 == 1){
+					$(this).addClass("odd").animate(
+						{left:"100px"}
+						, 1000
+						, easeInOutSine
+					)
+				}else{
+					$(this).addClass("even").animate(
+						{left:"400px"}
+						, 1000
+						, easeOutSine
+					)
+				}
+			});
+		});
+	})(jQuery);
+	
+	// $.each() 의 기능은 일치된 집합을 가지고 각 요소에 대하여 인덱스 참조를 사용하여 루프를 반복하여면서 어떠한 동작을 수행하는 것 
+
+
+
+
+	
+</script>
+</body>
+</html>
