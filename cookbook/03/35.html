@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<ol>
+	<li>jon</li>
+	<li>co</li>
+	<li>james</li>
+	<li>ral</li>
+	<li>jonthan</li>
+</ol>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function(){
+			var arr = $.map($('Li'), function(item, index){
+				while(index < 3){
+					return $(item).html();
+				}
+				return null;
+			});
+			$(document.body).append("<span> the first</span>");
+		});
+	})(jQuery);
+</script>
+</body>
+</html>

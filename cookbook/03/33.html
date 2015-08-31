@@ -11,12 +11,20 @@
 </head>
 <body>
 
+<div><p>
+	jquery, the write less, do more javscript libray, saving ths=eday fom
+</p>	</div>
 
 <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
 // 선택된 jQuery 개체를 원래의 DOM개체로 변환하기	
 // jQuery 는 모든 매치된 jQuery 개체들을 dom개체의 배영로 변환해주는 메서드인 get()메서드를 제공하고 있다. 추가적으로 $.get(1); 와 같이 인덱스 값을 get() 메서드의 매개변수로 지정할 수 도 있는데, 이는 결과 집합에서 지정된 인덱스에 해당하는 요소를 dom개체로 반환 할것이다.
-
+(function ($){
+	$(document).ready(function(){
+		var inner = $("div")[0].innerHTML;
+		alert(inner);
+	});
+})(jQuery);
 
 
 </script>

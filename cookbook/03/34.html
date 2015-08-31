@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+
+<div class="">
+	click me
+</div>
+<div class="test">
+	test
+</div>
+
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	$(function ($){
+		$(document).ready(function(){
+			$("div").click(function(){
+				alert("uou" + $("div").index(this));
+			});
+
+			var test = $("div.text");
+			$("div").each(function(i){
+				if ($(this).index(test) >= 0){
+					// 작업 수행
+					
+				}else{
+					// 그밖의 작업 수행
+					
+				}
+			});
+
+
+		});
+	})(jQuery);
+
+
+</script>
+</body>
+</html>
